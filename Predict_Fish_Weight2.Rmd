@@ -88,14 +88,28 @@ print(results)
 
 ```{r}
 pikeModel=lm(Weight~Height+Width, data=pike)
-summary(perchModel)
+summary(pikeModel)
 ```
 
 ## Roach
 
+```{r}
+roach = filter(fishData, Species == "Roach")
+```
+
 ### Best Models
 
+```{r}
+roachModel=lm(Weight~Height+Width, data=roach)
+summary(roachModel)
+```
+
 ### Best Two regressor model
+
+```{r}
+roachModel=lm(Weight~Height+Width, data=roach)
+summary(roachModel)
+```
 
 ## Final Summary Statements
 Among these model we found the best 
