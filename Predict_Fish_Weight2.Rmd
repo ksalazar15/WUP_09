@@ -51,7 +51,7 @@ The best two variable for predicting weight are height and width so we used heig
 
 ### Best Two regressor model
 
-The best two predictor regressor model is 
+The best two predictor regressor model is height and width
 ```{r}
 perchModel=lm(Weight~Height+Width, data=perch)
 summary(perchModel)
@@ -88,7 +88,7 @@ The best two variable for predicting weight are length1 and length3 so we used l
 
 ### Best Two regressor model
 
-The best two predictor regressor model is 
+The best two predictor regressor model is length1 and length3
 ```{r}
 pikeModel=lm(Weight~Height+Width, data=pike)
 summary(pikeModel)
@@ -121,11 +121,12 @@ results = data.frame(
 print(results)
 
 ```
+
 The best two variable for predicting weight are length3 and width so we used length3 and width to predict weight.
 
 ### Best Two regressor model
 
-The best two predictor regressor model is 
+The best two predictor regressor model is length3 and width
 ```{r}
 roachModel=lm(Weight~Height+Width, data=roach)
 summary(roachModel)
