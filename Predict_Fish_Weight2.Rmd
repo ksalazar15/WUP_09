@@ -104,16 +104,33 @@ roach = filter(fishData, Species == "Roach")
 ### Best Models
 
 ```{r}
-roachModel=lm(Weight~Height+Width, data=roach)
-summary(roachModel)
+models = regsubsets(Weight ~ Length1+Length2+Length3+Height+Width, data=roach,
+                    nvmax=5)
+
+summary(models)
+
+res.sum <- summary(models)
+Adj.R2 = which.max(res.sum$adjr2)
+print(paste("best adjusted r-squared", Adj.R2))
+
+results = data.frame(
+  Adj.R2 = which.max(res.sum$adjr2),
+  CP = which.min(res.sum$cp),
+  BIC = which.min(res.sum$bic)
+)
+print(results)
+
 ```
+The best two variable for predicting weight are length3 and width so we used length3 and width to predict weight.
 
 ### Best Two regressor model
 
+The best two predictor regressor model is 
 ```{r}
 roachModel=lm(Weight~Height+Width, data=roach)
 summary(roachModel)
 ```
+For the best model for adjusted r squared is 0.84
 
 ## Final Summary Statements
 Among these model we found the best 
