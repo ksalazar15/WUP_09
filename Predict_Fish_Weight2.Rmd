@@ -134,4 +134,5 @@ summary(roachModel)
 For the best model for adjusted r squared is 0.84
 
 ## Final Summary Statements
-Among these model we found the best 
+
+Among these model we found the best is the one with the largest r squared is the model used for perch which is height and width with an r squared of 0.94
