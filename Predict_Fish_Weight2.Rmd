@@ -86,7 +86,10 @@ print(results)
 
 ### Best Two regressor model
 
-
+```{r}
+pikeModel=lm(Weight~Height+Width, data=pike)
+summary(perchModel)
+```
 
 ## Roach
 
