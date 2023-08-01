@@ -84,12 +84,16 @@ print(results)
 
 ```
 
+The best two variable for predicting weight are length1 and length3 so we used length1 and length3 to predict weight.
+
 ### Best Two regressor model
 
+The best two predictor regressor model is 
 ```{r}
 pikeModel=lm(Weight~Height+Width, data=pike)
 summary(pikeModel)
 ```
+For the best model for adjusted r squared is 0.86
 
 ## Roach
 
